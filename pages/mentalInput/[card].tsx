@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import CardAfficheInput from "../../components/CardAfficheInput";
 import Custom404 from "../404";
-import { questionData } from "../../dataQuestion";
+import { questionData } from "../../dataQuestion.js";
 
 
 export default function Card() {
