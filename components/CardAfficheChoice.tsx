@@ -1,6 +1,5 @@
 import { redirect } from "next/dist/server/api-utils";
 import router from "next/router";
-import Image from 'next/image'
 import { useState } from "react";
 import GoodResponse from "./GoodResponse";
 import Layout from "./Layout";
@@ -28,7 +27,7 @@ export default function CardAfficheChoice(props) {
       <div className="card h-100 justify-content-center" style={{marginTop:"200px"}}>
       <div className="row g-0">
           <div className="col-md-4">
-          <Image src={props.image} className="img-fluid rounded-start" alt=""/>
+          <img src={props.image} className="img-fluid rounded-start" alt=""/>
         </div>
         <div className="col-md-8">
           <div className="card-body">
