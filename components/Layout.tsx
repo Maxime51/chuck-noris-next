@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { questionData } from "../pages/dataQuestion";
+import { questionData } from "../dataQuestion";
 
 export default function Layout({ children }) {
   return <div>

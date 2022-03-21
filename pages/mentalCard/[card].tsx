@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CardAffiche from "../../components/CardAffiche";
 import Layout from "../../components/Layout";
 import Custom404 from "../404";
-import { questionData } from "../dataQuestion";
+import { questionData } from "../../dataQuestion";
 
 
 export default function Card() {
