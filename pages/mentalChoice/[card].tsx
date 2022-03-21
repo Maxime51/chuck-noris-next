@@ -14,7 +14,7 @@ export default function Card() {
   useEffect(() => {
     if (numberOfPages !== undefined && numberOfPages <= questionData.length && !isNaN(numberOfPages)) {
       const arrayResponse = [questionData[parseInt(numberOfPages)-1].reponse,questionData[parseInt(numberOfPages)-1].response2,questionData[parseInt(numberOfPages)-1].response3]
-      setAffiche(<CardAfficheChoice page={parseInt(numberOfPages)}question={questionData[parseInt(numberOfPages) - 1].question} arrayReponse={arrayResponse} reponse={questionData[parseInt(numberOfPages)-1].reponse} image={questionData[parseInt(numberOfPages)-1].image}/>);
+      setAffiche(<CardAfficheChoice page={parseInt(numberOfPages)} question={questionData[parseInt(numberOfPages) - 1].question} arrayReponse={arrayResponse} reponse={questionData[parseInt(numberOfPages)-1].reponse} image={questionData[parseInt(numberOfPages)-1].image}/>);
     } else {
       setAffiche(<Custom404 />)
     }
