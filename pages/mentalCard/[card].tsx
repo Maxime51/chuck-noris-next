@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import CardAffiche from "../../components/CardAffiche";
 import Layout from "../../components/Layout";
 import Custom404 from "../404";
+import Image from 'next/image'
 import { questionData } from "../dataQuestion";
 
 
