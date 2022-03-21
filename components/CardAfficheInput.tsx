@@ -22,21 +22,22 @@ export default function CardAfficheInput(props) {
   }
 
   if (show === 0) {
-    return <Layout><div className="container" style={{ width: "20rem", marginTop: "200px" }}>
-      <div className="card">
-        <div className="card-header">
-          Question
+    return <Layout>
+      <div className="card h-100 justify-content-center" style={{marginTop:"200px"}}>
+      <div className="row g-0">
+          <div className="col-md-4">
+          <img src={props.image} className="img-fluid rounded-start"/>
         </div>
-        <img src={props.image}/>
-        <div className="card-body">
-          <div className="form-group">
-            <h5 className="card-title">{props.question}</h5>
-            <input type="text" onChange={(event) => setResponseInput(event.target.value)} className="form-control" id="response" aria-describedby="response" placeholder="Your Response" />
-          </div>
-          <button onClick={validResponse} type="submit" className="btn btn-primary">Submit</button>
+        <div className="col-md-8">
+          <div className="card-body">
+            <h5 className="card-title">Question :</h5>
+              <p className="card-text">{props.question}</p>
+              <input type="text" onChange={(event) => setResponseInput(event.target.value)} className="form-control" id="response" aria-describedby="response" placeholder="Your Response" />
+            </div>
+            <button onClick={validResponse} type="submit" className="btn btn-primary">Submit</button>
         </div>
       </div>
-    </div>
+      </div>
     </Layout>
   } else if (show === 1) {
     return <Layout><div onClick={handleClick}><GoodResponse /></div></Layout>

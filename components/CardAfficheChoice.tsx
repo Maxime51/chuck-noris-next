@@ -23,29 +23,33 @@ export default function CardAfficheChoice(props) {
   }
 
   if (show === 0) {
-    return <Layout><div className="container" style={{ width: "20rem", marginTop: "200px" }}>
-      <div className="card">
-        <div className="card-header">
-          Question
+    return <Layout>
+      <div className="card h-100 justify-content-center" style={{marginTop:"200px"}}>
+      <div className="row g-0">
+          <div className="col-md-4">
+          <img src={props.image} className="img-fluid rounded-start"/>
         </div>
-        <img src={props.image}></img>
-        <div className="card-body">
-          <h5 className="card-title">{props.question}</h5>
-          <form onSubmit={validResponse}>
-          {props.arrayReponse.map((element) => {
-            return (
-              <div className="form-check" key={element}>
-              <input className="form-check-input" type="radio" onClick={() => setResponseInput(`${element}`)} name="flexRadioDefault" id="flexRadioDefault1" />
-              <label className="form-check-label" >
-                {element}
-              </label>
-            </div>);
-          })}
-          <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+        <div className="col-md-8">
+          <div className="card-body">
+            <h5 className="card-title">Question :</h5>
+              <p className="card-text">{props.question}</p>
+              <form onSubmit={validResponse}>
+                {props.arrayReponse.map((element) => {
+                return (
+                  <div className="form-check" key={element}>
+                  <input className="form-check-input" type="radio" onClick={() => setResponseInput(`${element}`)} name="flexRadioDefault" id="flexRadioDefault1" />
+                  <label className="form-check-label" >
+                    {element}
+                  </label>
+                </div>);
+               })}
+                <button type="submit" className="btn btn-primary">Submit</button>
+              </form>
+            </div>
         </div>
       </div>
-    </div>
+      </div>
+
     </Layout>
   } else if (show === 1) {
     return <Layout><div onClick={handleClick}><GoodResponse /></div></Layout>

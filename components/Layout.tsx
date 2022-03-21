@@ -57,8 +57,9 @@ export default function Layout({ children }) {
     </ul>
     </div>
   </div>
-</nav>
-  {children}
-
+    </nav>
+  <div className="container h-100">
+    {children}
+  </div>
   </div>
 }
