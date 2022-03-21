@@ -4,14 +4,8 @@ const nextConfig = {
 
 }
 module.exports = {
-  rules: {
-    // Other rules
-    "@next/next/no-img-element": "off"
-  }
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
-module.exports = {
-images: {
-    domains: ["www.jesuiscultive.com","www.quizz.biz"],
-  }
-} ;
 module.exports = nextConfig
