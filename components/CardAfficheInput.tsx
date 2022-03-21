@@ -23,8 +23,8 @@ export default function CardAfficheInput(props) {
 
   if (show === 0) {
     return <Layout>
-      <div className="shadow-lg p-3 mb-5 bg-white rounded">
-      <div className="card h-100 justify-content-center" >
+      <div className="shadow-lg p-3 mb-5 bg-dark rounded">
+      <div className="card h-100 justify-content-center text-white bg-dark mb-3" >
       <div className="row g-0">
           <div className="col-md-4">
           <img src={props.image} className="img-fluid rounded-start" alt="" style={{maxHeight:"310px"}}/>
