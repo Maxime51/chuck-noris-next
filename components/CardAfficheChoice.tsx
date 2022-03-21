@@ -24,15 +24,16 @@ export default function CardAfficheChoice(props) {
 
   if (show === 0) {
     return <Layout>
-      <div className="card h-100 justify-content-center" style={{marginTop:"200px"}}>
+      <div className="shadow-lg p-3 mb-5 bg-white rounded">
+      <div className="card h-100 justify-content-center" >
       <div className="row g-0">
           <div className="col-md-4">
-          <img src={props.image} className="img-fluid rounded-start" alt=""/>
+          <img src={props.image} className="img-fluid rounded-start" alt="" style={{maxHeight:"310px"}}/>
         </div>
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title">Question :</h5>
-              <p className="card-text">{props.question}</p>
+              <h4 className="card-text">{props.question}</h4>
               <form onSubmit={validResponse}>
                 {props.arrayReponse.map((element) => {
                 return (
@@ -42,14 +43,16 @@ export default function CardAfficheChoice(props) {
                     {element}
                   </label>
                 </div>);
-               })}
+                })}
+                <br></br>
+                <br></br>
                 <button type="submit" className="btn btn-primary">Submit</button>
               </form>
             </div>
         </div>
       </div>
       </div>
-
+      </div>
     </Layout>
   } else if (show === 1) {
     return <Layout><div onClick={handleClick}><GoodResponse /></div></Layout>

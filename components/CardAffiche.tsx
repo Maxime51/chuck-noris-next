@@ -1,17 +1,17 @@
 import Image from 'next/image'
 export default function CardAffiche(props) {
-  return <div className="card h-100 justify-content-center" style={{marginTop:"200px"}}>
+  return <div className="shadow-lg p-3 mb-5 bg-white rounded"><div className="card h-100 justify-content-center" >
   <div className="row g-0">
       <div className="col-md-4">
-      <img src={props.image} className="img-fluid rounded-start" alt="test"/>
+      <img src={props.image} className="img-fluid rounded-start" alt="test" style={{maxHeight:"310px"}}/>
     </div>
     <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title">Question :</h5>
-        <p className="card-text">{props.text}</p>
+      <div className="card-body ">
+        <h4 className="card-text" >{props.text}</h4>
       </div>
     </div>
   </div>
-</div>
+  </div>
+    </div>
 
 }
